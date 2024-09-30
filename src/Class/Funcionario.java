@@ -5,9 +5,9 @@ public class Funcionario {
     private String nome;
     private String cargo;
     private int salario;
-    private String horasTrabalhadas;
+    private int horasTrabalhadas;
 
-    public Funcionario(String nome, String cargo, int salario, String horasTrabalhadas) {
+    public Funcionario(String nome, String cargo, int salario, int horasTrabalhadas) {
         this.nome = nome;
         this.cargo = cargo;
         this.salario = salario;
@@ -38,11 +38,11 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public String getHorasTrabalhadas() {
+    public int getHorasTrabalhadas() {
         return horasTrabalhadas;
     }
 
-    public void setHorasTrabalhadas(String horasTrabalhadas) {
+    public void setHorasTrabalhadas(int horasTrabalhadas) {
         this.horasTrabalhadas = horasTrabalhadas;
     }
 

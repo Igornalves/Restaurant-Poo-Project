@@ -1,18 +1,21 @@
 package Class;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class Pedido {
 
     private String id;
     private Cliente cliente;
-    private int valorTotal;
-    private String[] listaDeItens;
+    private double valorTotal;
+    private List<Item> listaDeItens;
     private boolean status;
 
-    public Pedido(String id, Cliente cliente, int valorTotal, String[] listaDeItens, boolean status) {
+    public Pedido(String id, Cliente cliente, double valorTotal, List<Item> listaDeItens, boolean status) {
         this.id = id;
         this.cliente = cliente;
         this.valorTotal = valorTotal;
-        this.listaDeItens = listaDeItens;
+        this.listaDeItens = new ArrayList<>();
         this.status = status;
     }
 
@@ -32,19 +35,19 @@ public class Pedido {
         this.cliente = cliente;
     }
 
-    public int getValorTotal() {
+    public double getValorTotal() {
         return valorTotal;
     }
 
-    public void setValorTotal(int valorTotal) {
+    public void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
     }
 
-    public String[] getListaDeItens() {
+    public List<Item> getListaDeItens() {
         return listaDeItens;
     }
 
-    public void setListaDeItens(String[] listaDeItens) {
+    public void setListaDeItens(List<Item> listaDeItens) {
         this.listaDeItens = listaDeItens;
     }
 

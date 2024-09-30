@@ -74,13 +74,18 @@ Em termos de POO, as seguintes classes podem ser utilizadas:
 - **Métodos**: logar(), atenderCliente(), gerarRelatorioVendas().
 
 ### Pedido
-- **Atributos**: id, cliente, listaDeItens, valorTotal, status.
-- **Métodos**: calcularValorTotal(), adicionarItem(), removerItem(), cancelar().
+- **Atributos**: id, cliente, listaDeItens (List<Item>), valorTotal, status.
+- **Métodos**: calcularValorTotal(), adicionarItem(Item item), removerItem(Item item), cancelar().
+
+### Item
+- **Atributos**: nome, preco.
+- **Métodos**: getters para nome e preco.
 
 ### Mesa
 - **Atributos**: numero, capacidade, ocupada.
-- **Métodos**: reservar(), liberar(), associarPedido().
+- **Métodos**: reservar(), liberar(), associarPedido(Pedido pedido).
 
 ### Estoque
 - **Atributos**: listaIngredientes, quantidadeMinima.
-- **Métodos**: atualizarEstoque(), alertarBaixa().
+- **Métodos**: atualizarEstoque(String ingrediente, int quantidade), alertarBaixa().
+

@@ -1,20 +1,23 @@
 package Class;
 
+import java.util.Map;
+import java.util.HashMap;
+
 public class Estoque {
 
-    private String[] listaIngrediente;
+    private Map<String, Integer> listaIngrediente;
     private int quantidadeMinima;
 
-    public Estoque(String[] listaIngrediente, int quantidadeMinima) {
-        this.listaIngrediente = listaIngrediente;
+    public Estoque(Map<String, Integer> listaIngrediente, int quantidadeMinima) {
+        this.listaIngrediente = new HashMap<>();
         this.quantidadeMinima = quantidadeMinima;
     }
 
-    public String[] getListaIngrediente() {
+    public Map<String, Integer> getListaIngrediente() {
         return listaIngrediente;
     }
 
-    public void setListaIngrediente(String[] listaIngrediente) {
+    public void setListaIngrediente(Map<String, Integer> listaIngrediente) {
         this.listaIngrediente = listaIngrediente;
     }
 
