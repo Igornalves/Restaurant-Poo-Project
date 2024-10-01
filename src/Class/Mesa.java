@@ -5,7 +5,7 @@ public class Mesa {
     private int numero;
     private int capacidade;
     private boolean ocupada;
-
+    
     public Mesa(int numero, int capacidade, boolean ocupada) {
         this.numero = numero;
         this.capacidade = capacidade;

@@ -1,5 +1,6 @@
 package Services;
 
+import Class.Cliente;
 import Class.Mesa;
 import Class.Pedido;
 
@@ -7,10 +8,10 @@ public class MesaService {
 
     private Mesa mesa;
 
-    public void reservar(Mesa mesa) {
+    public void reservar(Mesa mesa, Cliente cliente) {
         if (!mesa.isOcupada()) {
             mesa.setOcupada(true);
-            System.out.println("Mesa " + mesa.getNumero() + " reservada com sucesso.");
+            System.out.println("Mesa " + mesa.getNumero() + " reservada com sucesso para o cliente " + cliente.getNome());
         } else {
             System.out.println("Mesa " + mesa.getNumero() + " ja esta ocupada");
         }

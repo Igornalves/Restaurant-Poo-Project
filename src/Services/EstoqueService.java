@@ -1,7 +1,7 @@
 package Services;
 
 import Class.Estoque;
-import java.util.Map;
+import Class.Ingredintes;
 
 public class EstoqueService {
 
@@ -11,31 +11,29 @@ public class EstoqueService {
         this.estoque = estoque;
     }
 
-    public void atualizarEstoque(String ingrediente, int quantidade) {
-        Map<String,Integer> listaIngredientes = estoque.getListaIngrediente();
-        if (listaIngredientes.containsKey(ingrediente)) {
-            int novaQuantidade = listaIngredientes.get(ingrediente) + quantidade;
-            
-            if (novaQuantidade < 0) {
-                System.out.println("Erro: Estoque insuficiente para " + ingrediente);
-            } else {
-                listaIngredientes.put(ingrediente, novaQuantidade);
-                System.out.println("Estoque atualizado: " + ingrediente + " agora tem " + novaQuantidade + " unidades");
-            }
-        } else {
-            listaIngredientes.put(ingrediente, quantidade);
-            System.out.println("Ingrediente " + ingrediente + " adicionado com " + quantidade + " unidades.");
+    public void ListandoTodosOsIngredientes() {
+        System.out.println("Listando todos os itens e ingredientes no estoque: ");
+        for (int i = 0; i < estoque.getListaIngrediente().size(); i++) {
+            System.out.println(estoque.getListaIngrediente().get(i).getNome());
         }
+    }
 
+    public void removendoEstoque(Ingredintes ingredintes) {
+        for (int i = 0; i < estoque.getListaIngrediente().size(); i++) {
+            if (estoque.getListaIngrediente().get(i).getNome() == ingredintes.getNome()) {
+                estoque.getListaIngrediente().remove(i);
+                System.out.println("Item removido com sucesso !!! " + ingredintes.getNome());
+            }
+        }
     }
 
     public void alertarBaixa() {
-        Map<String, Integer> listaIngredientes = estoque.getListaIngrediente();
-        for (Map.Entry<String, Integer> entry : listaIngredientes.entrySet()) {
-            String ingrediente = entry.getKey();
-            int quantidade = entry.getValue();
-            if (quantidade < estoque.getQuantidadeMinima()) {
-                System.out.println("Alerta: O ingrediente " + ingrediente + " está abaixo da quantidade mínima de " + estoque.getQuantidadeMinima() + " unidades.");
+        int quantidadeMinima = estoque.getQuantidadeMinima();
+
+        for (Ingredintes ingredintes : estoque.getListaIngrediente()) {
+            if (ingredintes.getQunatidade() < quantidadeMinima) {
+                System.out.println("Alerta: o ingrediente " + ingredintes.getNome()
+                        + " esta abaixo da quantidade minima de " + quantidadeMinima + " unidades");
             }
         }
     }

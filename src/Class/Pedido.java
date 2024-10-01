@@ -7,17 +7,19 @@ public class Pedido {
 
     private String id;
     private Cliente cliente;
+    private Funcionario funcionario;
     private double valorTotal;
     private List<Item> listaDeItens;
     private boolean status;
 
-    public Pedido(String id, Cliente cliente, double valorTotal, List<Item> listaDeItens, boolean status) {
+    public Pedido(String id, Cliente cliente, Funcionario funcionario, boolean status) {
         this.id = id;
         this.cliente = cliente;
-        this.valorTotal = valorTotal;
+        this.funcionario = funcionario;
+        this.valorTotal = 0;
         this.listaDeItens = new ArrayList<>();
         this.status = status;
-    }
+    }       
 
     public String getId() {
         return id;
@@ -57,6 +59,14 @@ public class Pedido {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
     }
 
 }

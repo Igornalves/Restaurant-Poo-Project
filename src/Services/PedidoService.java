@@ -12,6 +12,12 @@ public class PedidoService {
         this.pedido = pedido;
     }
 
+    public void listaDosItensPedidos() {
+        for (Item item : pedido.getListaDeItens()) {
+            System.out.println(item.getNome() + " - R$" + item.getPreco());
+        }
+    }
+
     public void calcularValorTotal() {
         double total = 0;
         for (Item item : pedido.getListaDeItens()) {
