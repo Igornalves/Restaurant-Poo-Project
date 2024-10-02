@@ -10,7 +10,7 @@ public class ClienteService {
     private Cliente cliente;
     private List<Pedido> pedidoRealizados;
 
-    public ClienteService(Cliente cliente, List<Pedido> pedidoRealizados) {
+    public ClienteService(Cliente cliente) {
         this.cliente = cliente;
         this.pedidoRealizados = new ArrayList<>();
     }
@@ -24,7 +24,8 @@ public class ClienteService {
         System.out.println("Mesa " + numeroMesa + " reserva para " + cliente.getNome() + ".");
     }
 
-    public List<Pedido> pagarConta() {
-        return pedidoRealizados;
+    public void pagarConta(Pedido pedido, String formaDePagamento) {
+        System.out.println("Pagamento do pedido foi realizado pelo cliente " + pedido.getCliente().getNome() + " com o valor total de R$ " + pedido.getValorTotal() + " com a forma de pagamento " + formaDePagamento);
     }
+    
 }

@@ -26,10 +26,10 @@ public class FuncionarioService {
         }
     }
 
-    public void registrarPedido(Cliente cliente,Pedido pedido) {
+    public void registrarPedido(Pedido pedido) {
         if (pedido != null) {
             pedidos.add(pedido);
-            System.out.println("Pedido registrado com sucesso Para o Cliente de nome " + cliente.getNome());
+            System.out.println("Pedido registrado com sucesso Para o Cliente de nome " + pedido.getCliente().getNome());
         } else {
             System.out.println("Pedido nao registrado com sucesso, tente novamente.");
         }
