@@ -1,30 +1,16 @@
-## Projeto Sistema para Restaurantes
+## Restaurant System Project
 
-Esse sistema aqui é uma sistema para ser desenvolvido como o uso de uma logica de POO em java para criacao desse sistema para aprndizagem e reforco de base na logica e estruturacao de projeto.
+This system here is a system to be developed using OOP logic in Java to create this system for learning and reinforcing the foundation in project logic and structuring.
 
-## Índice
+## Index
 
-- [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Pré-requisitos](#pré-requisitos)
-- [Instalação e Configuração](#instalação-e-configuração)
-- [Execução do Projeto](#execução-do-projeto)
+- [Technologies and Tools Used](#technologies-and-tools-used)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Installation and Configuration](#installation-and-configuration)
+- [Project Execution](#project-execution)
 
-## Tecnologias e Ferramentas Utilizadas
-
-<br>
-<div style="display: inline_block" align="center">
-
-<img width="100" src="https://skillicons.dev/icons?i=java">
-
-</div>
-<br>
-
-- ***Linguagem:*** Java
-
-## Pré-requisitos
-
-é necessário garantir que seu ambiente de desenvolvimento esteja configurado adequadamente. Aqui estão os principais pré-requisitos:
+## Technologies and Tools Used
 
 <br>
 <div style="display: inline_block" align="center">
@@ -34,10 +20,23 @@ Esse sistema aqui é uma sistema para ser desenvolvido como o uso de uma logica 
 </div>
 <br>
 
-- Java Development Kit (JDK): ***versão 8*** ou superior como a ***JDK 17*** recomendada pela documentacao.
+- ***Language:*** Java
 
+## Prerequisites
 
-#### IDE (Ambiente de Desenvolvimento Integrado):
+You need to ensure that your development environment is properly configured. Here are the main prerequisites:
+
+<br>
+<div style="display: inline_block" align="center">
+
+<img width="100" src="https://skillicons.dev/icons?i=java">
+
+</div>
+<br>
+
+- Java Development Kit (JDK): ***version 8*** or higher as ***JDK 17*** recommended by the documentation.
+
+#### IDE (Integrated Development Environment):
 
 <br>
 <div style="display: inline_block" align="center">
@@ -49,21 +48,21 @@ Esse sistema aqui é uma sistema para ser desenvolvido como o uso de uma logica 
 </div>
 <br>
 
- - ***IntelliJ IDEA*** (com o plugin Spring Boot integrado).
- - ***Eclipse*** (com o plugin Spring Tools Suite - STS).
- - ***VS Code*** (com extensões para Java e Spring Boot)
+ - ***IntelliJ IDEA*** (with integrated Spring Boot plugin).
+ - ***Eclipse*** (with the Spring Tools Suite - STS plugin).
+ - ***VS Code*** (with extensions for Java and Spring Boot)
 
-## Instalação e Configuração
+## Installation and Configuration
 
-1. **Clone o repositório**:
-    ```bash
-    git clone https://github.com/seu-repositorio/sistema-gerenciamento-escola.git
-    ```
-2. **Ir ate a pasta APP e roda o codigo main**
-    ```java 
-    public class App {
-        public static void main(String[] args) throws Exception {
-            System.out.println("Hello, World!");
-        }
-    }
-    ```
+1. **Clone the repository**:
+```bash
+git clone https://github.com/seu-repositorio/sistema-gerenciamento-escola.git
+```
+2. **Go to the APP folder and run the code main**
+```java
+public class App {
+public static void main(String[] args) throws Exception {
+System.out.println("Hello, World!");
+}
+}
+```
