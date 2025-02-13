@@ -91,12 +91,12 @@ New-Item -ItemType Directory -Path target -Force
 - 2️⃣ Create the .jar directly in the target folder
 
 ```powershell
-jar cfm target/Project_Flight-Reservation_Poo.jar out/META-INF/MANIFEST.MF -C out .
+jar cfm target/Restaurant-Poo-Project.jar out/META-INF/MANIFEST.MF -C out .
 ````
 
 - 4️⃣ Run the .jar
 Test to see if it works:
 
 ```powershell
-java -jar target/Project_Flight-Reservation_Poo.jar
+java -jar target/Restaurant-Poo-Project.jar
 ```
