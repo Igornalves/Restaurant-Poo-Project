@@ -66,3 +66,37 @@ System.out.println("Hello, World!");
 }
 }
 ```
+## Creating commands to be able to execute the complete .jar and run the project
+
+- 1️⃣ Create the META-INF folder inside out/
+Run this command in PowerShell to create the required folder:
+
+ ```powershell
+New-Item -ItemType Directory -Path out\META-INF -Force
+ ```
+- 2️⃣ Create MANIFEST.MF correctly
+Now create the MANIFEST.MF file in PowerShell with:
+
+```powershell
+Set-Content -Path out\META-INF\MANIFEST.MF -Value "Manifest-Version: 1.0`nMain-Class: App.App`n"
+
+```
+
+- 1️⃣ Create the target folder (if it doesn't already exist)
+
+```powershell
+New-Item -ItemType Directory -Path target -Force
+```
+
+- 2️⃣ Create the .jar directly in the target folder
+
+```powershell
+jar cfm target/Project_Flight-Reservation_Poo.jar out/META-INF/MANIFEST.MF -C out .
+````
+
+- 4️⃣ Run the .jar
+Test to see if it works:
+
+```powershell
+java -jar target/Project_Flight-Reservation_Poo.jar
+```
